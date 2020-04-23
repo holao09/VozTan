@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="giuffre.it.clienspiu.MainActivity">
+    <item
+        android:id="@+id/option"
+        android:orderInCategory="100"
+        android:title="@string/option"
+        android:icon="@drawable/_adblock_on"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_item_product_info"
+        android:orderInCategory="100"
+        android:title="@string/product_info"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_submit_bug_report"
+        android:orderInCategory="100"
+        android:title="@string/submit_bug_report"
+        app:showAsAction="never"/>
+</menu>

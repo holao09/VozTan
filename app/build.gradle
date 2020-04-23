@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.SuperNamek.NextVoz"
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+ext {
+    supportVersion = '28.0.0'
+    okHttpVersion = '3.9.1'
+    daggerVersion = '1.2.5'
+    leakCanaryVersion = '1.5.4'
+    retrofitVersion = '2.3.0'
+    roomVersion = '1.0.0'
+    archVersion = '1.1.0'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0',
+    'androidx.recyclerview:recyclerview:1.0.0',
+    'androidx.cardview:cardview:1.0.0',
+    'com.google.android.material:material:1.0.0',
+    'androidx.preference:preference:1.0.0',
+    'androidx.browser:browser:1.0.0',
+    "com.squareup.dagger:dagger:$daggerVersion",
+    "com.squareup.retrofit2:retrofit:$retrofitVersion",
+    "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+    "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
+    "com.squareup.okhttp3:okhttp:$okHttpVersion",
+    "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
+    "io.reactivex:rxandroid:1.2.1",
+    "io.reactivex:rxjava:1.1.7",
+    'androidx.room:room-runtime:2.0.0',
+    'androidx.lifecycle:lifecycle-extensions:2.0.0',
+    'androidx.lifecycle:lifecycle-common-java8:2.0.0',
+    "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testImplementation 'junit:junit:4.13'
+}
