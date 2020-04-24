@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1049226974228",
+    "firebase_url": "https://voztan-c55bd.firebaseio.com",
+    "project_id": "voztan-c55bd",
+    "storage_bucket": "voztan-c55bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049226974228:android:c5044753411006ff0d8301",
+        "android_client_info": {
+          "package_name": "com.SuperNamek.NextVoz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049226974228-2q5fo9v6hf3sbp59vvfdklpl4grlfasv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWpCBdobOorNZYbOQs7FIpnKvopQf9rF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049226974228-2q5fo9v6hf3sbp59vvfdklpl4grlfasv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

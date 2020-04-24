@@ -112,6 +112,14 @@ public class MainActivity extends AppCompatActivity {
                         menu.getItem(0).setIcon(getResources().getDrawable(R.drawable._adblock_on));
                     }
                 return true;
+
+            case R.id.f17:
+                EventBus.getDefault().postSticky(new EventRedirectBrowser(getString(R.string.f17url)));
+                return true;
+            case R.id.f33:
+                EventBus.getDefault().postSticky(new EventRedirectBrowser(getString(R.string.f33url)));
+                return true;
+
             case R.id.menu_item_product_info:
                 EventBus.getDefault().postSticky(new EventRedirectBrowser(getString(R.string.URL_INFO)));
                 return true;

@@ -47,7 +47,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="opacityPercent" value="60" />
+                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="paddingPercent" value="-10" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -58,9 +59,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Viet Nguyen\Desktop\voznext\Hands-20-512.webp" />
-                                      <entry key="outputName" value="_adblock_on" />
-                                      <entry key="themeColor" value="ffffff" />
+                                      <entry key="imageAsset" value="C:\Users\Viet_Nguyen\Downloads\LogoMakr_4k7UeF.png" />
+                                      <entry key="outputName" value="_f33_" />
+                                      <entry key="theme" value="CUSTOM" />
+                                      <entry key="themeColor" value="7b0010" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -147,6 +149,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>

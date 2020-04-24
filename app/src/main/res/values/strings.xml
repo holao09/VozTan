@@ -4,8 +4,8 @@
     <string name="app_name" translatable="false">VozTân</string>
 
     <string name="URL_WEBSITE" translatable="false">https://next.voz.vn</string>
-    <string name="URL_INFO" translatable="false">https://next.voz.vn/u/super-namek.1492783</string>
-    <string name="BUG_REPORT_MAIL_ADDRESS" translatable="false">support@google.com</string>
+    <string name="URL_INFO" translatable="false">https://next.voz.vn/t/android-voztan-app-opensource.32386/</string>
+    <string name="BUG_REPORT_MAIL_ADDRESS" translatable="false">mrholao09@google.com</string>
     <string name="BUG_REPORT_MAIL_SUBJECT">Bug Report</string>
 
     <string name="retry">Retry</string>
@@ -15,4 +15,8 @@
     <string name="submit_bug_report">Submit Bug Report</string>
     <string name="file_download_started">Download started</string>
     <string name="file_download_message">File will be saved in the download folder</string>
+    <string name="f17" translatable="false">f17</string>
+    <string name="f33" translatable="false">f33</string>
+    <string name="f17url" translatable="false" >https://next.voz.vn/f/chuyen-tro-linh-tinh.17/</string>
+    <string name="f33url" translatable="false" >https://next.voz.vn/f/diem-bao.33/</string>
 </resources>
