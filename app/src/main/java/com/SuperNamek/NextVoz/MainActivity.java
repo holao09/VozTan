@@ -104,12 +104,12 @@ public class MainActivity extends AppCompatActivity {
                 if(browserFragment.getAdblock_status() == true)
                 {
                     browserFragment.setAdblock_status(false);
-                    menu.getItem(0).setIcon(getResources().getDrawable(R.drawable._adblock_off));
+                    menu.getItem(2).setIcon(getResources().getDrawable(R.drawable._adblock_off));
                 }
                 else
                     {
                         browserFragment.setAdblock_status(true);
-                        menu.getItem(0).setIcon(getResources().getDrawable(R.drawable._adblock_on));
+                        menu.getItem(2).setIcon(getResources().getDrawable(R.drawable._adblock_on));
                     }
                 return true;
 

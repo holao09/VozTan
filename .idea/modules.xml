@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NexTVoz.iml" filepath="$PROJECT_DIR$/NexTVoz.iml" group="NexTVoz" />
-      <module fileurl="file://$PROJECT_DIR$/app/NexTVoz-app.iml" filepath="$PROJECT_DIR$/app/NexTVoz-app.iml" group="NexTVoz/app" />
+      <module fileurl="file://$PROJECT_DIR$/VozTan.iml" filepath="$PROJECT_DIR$/VozTan.iml" group="VozTan" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="VozTan/app" />
     </modules>
   </component>
 </project>
