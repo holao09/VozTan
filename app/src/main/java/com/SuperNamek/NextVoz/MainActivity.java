@@ -3,8 +3,10 @@ package com.SuperNamek.NextVoz;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.webkit.WebView;
 import android.widget.Toast;
 
@@ -20,6 +22,8 @@ import com.SuperNamek.NextVoz.events.EventUseBrowserFragment;
 import com.SuperNamek.NextVoz.events.EventWebError;
 import com.SuperNamek.NextVoz.fragments.BrowserFragment;
 import com.SuperNamek.NextVoz.fragments.ErrorFragment;
+
+import javax.net.ssl.SSLSession;
 
 import rx.schedulers.Schedulers;
 
