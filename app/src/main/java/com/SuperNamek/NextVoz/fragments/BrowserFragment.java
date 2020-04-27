@@ -1,8 +1,8 @@
 package com.SuperNamek.NextVoz.fragments;
 
 
-import android.app.ActionBar;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -19,14 +19,12 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import com.SuperNamek.NextVoz.CustomWebView;
-import com.SuperNamek.NextVoz.CustomizedWebViewClient;
 import com.SuperNamek.NextVoz.Downloader;
-import com.SuperNamek.NextVoz.MainActivity;
 import com.SuperNamek.NextVoz.R;
 import com.SuperNamek.NextVoz.adblock.AdBlockWebViewClient;
 import com.SuperNamek.NextVoz.events.EventRedirectBrowser;
 
-import static android.webkit.WebView.*;
+import java.io.InputStream;
 
 /**
  * @Author: SuperNamek
@@ -39,7 +37,44 @@ public class BrowserFragment extends Fragment {
     private static CustomWebView webView;
     private WebSettings webSettings;
 
-    private AdBlockWebViewClient adBlockWebViewClient = new AdBlockWebViewClient(true);
+    private AdBlockWebViewClient adBlockWebViewClient = new AdBlockWebViewClient(true)
+    {
+        @Override
+        public void onPageFinished(WebView view, String url) {
+
+            // Inject CSS when page is done loading
+            injectCSS();
+            super.onPageFinished(view, url);
+        }
+    };
+
+    private void injectCSS() {
+        try {
+            InputStream inputStream;
+            if(getAdblock_status()) {
+                inputStream = getContext().getAssets().open("blockads.css");
+            }
+            else
+                {
+                    inputStream = getContext().getAssets().open("unblockads.css"); ;
+                }
+            byte[] buffer = new byte[inputStream.available()];
+            inputStream.read(buffer);
+            inputStream.close();
+            String encoded = Base64.encodeToString(buffer, Base64.NO_WRAP);
+            webView.loadUrl("javascript:(function() {" +
+                    "var parent = document.getElementsByTagName('head').item(0);" +
+                    "var style = document.createElement('style');" +
+                    "style.type = 'text/css';" +
+                    // Tell the browser to BASE64-decode the string into your script !!!
+                    "style.innerHTML = window.atob('" + encoded + "');" +
+                    "parent.appendChild(style)" +
+                    "})()");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void setAdblock_status(boolean status)
     {
@@ -104,6 +139,8 @@ public class BrowserFragment extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setAllowFileAccess(true);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        // Enable Javascript
+        webView.getSettings().setJavaScriptEnabled(true);
 
         webView.clearCache(true);
         webView.setWebChromeClient(new WebChromeClient());
