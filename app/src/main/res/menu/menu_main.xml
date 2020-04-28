@@ -18,7 +18,7 @@
         android:id="@+id/option"
         android:orderInCategory="100"
         android:title="@string/option"
-        android:icon="@drawable/_adblock_on"
+        android:icon="@drawable/adblock_on"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_item_product_info"

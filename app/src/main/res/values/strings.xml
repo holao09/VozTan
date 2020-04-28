@@ -11,12 +11,14 @@
     <string name="retry">Retry</string>
     <string name="error">Error</string>
     <string name="option" translatable="false">Ads Option</string>
-    <string name="product_info">Product Info</string>
-    <string name="submit_bug_report">Submit Bug Report</string>
+    <string name="product_info">Thông tin</string>
+    <string name="submit_bug_report">Báo lỗi</string>
     <string name="file_download_started">Download started</string>
     <string name="file_download_message">File will be saved in the download folder</string>
     <string name="f17" translatable="false">f17</string>
     <string name="f33" translatable="false">f33</string>
     <string name="f17url" translatable="false" >https://next.voz.vn/f/chuyen-tro-linh-tinh.17/</string>
     <string name="f33url" translatable="false" >https://next.voz.vn/f/diem-bao.33/</string>
+    <string name="ads_on_msg" translatable="false">Quảng cáo đã bật. Tủ Lạnh gửi lời cảm ơn</string>
+    <string name="ads_off_msg" translatable="false">Quảng cáo đã tắt. Tủ Lạnh méo ý kiến gì</string>
 </resources>

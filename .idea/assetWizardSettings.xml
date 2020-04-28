@@ -47,8 +47,32 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="opacityPercent" value="60" />
                                                 <entry key="paddingPercent" value="-10" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="opacityPercent" value="80" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="fontFamily" value="Cambria" />
+                                                <entry key="text" value="F17" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -58,11 +82,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Viet_Nguyen\Downloads\LogoMakr_4k7UeF.png" />
-                                      <entry key="outputName" value="_f33_" />
+                                      <entry key="assetType" value="TEXT" />
+                                      <entry key="imageAsset" value="C:\Users\Viet_Nguyen\Downloads\cooltext355889165701340.png" />
+                                      <entry key="outputName" value="_f17_" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="7b0010" />
+                                      <entry key="themeColor" value="06db5d" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -153,7 +177,27 @@
         </entry>
         <entry key="vectorWizard">
           <value>
-            <PersistentState />
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="values">
+                          <map>
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="autoMirrored" value="true" />
+                            <entry key="opacityPercent" value="65" />
+                            <entry key="outputName" value="adblock_off" />
+                            <entry key="sourceFile" value="C:\Users\Viet_Nguyen\Downloads\522d6c8965bafccd80457726e42febed.svg" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
           </value>
         </entry>
       </map>

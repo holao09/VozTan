@@ -1,8 +1,11 @@
 package com.SuperNamek.NextVoz.fragments;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,6 +23,7 @@ import org.greenrobot.eventbus.Subscribe;
 
 import com.SuperNamek.NextVoz.CustomWebView;
 import com.SuperNamek.NextVoz.Downloader;
+import com.SuperNamek.NextVoz.MainActivity;
 import com.SuperNamek.NextVoz.R;
 import com.SuperNamek.NextVoz.adblock.AdBlockWebViewClient;
 import com.SuperNamek.NextVoz.events.EventRedirectBrowser;
@@ -151,21 +155,25 @@ public class BrowserFragment extends Fragment {
     public class CustomeGestureDetector extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            ((Activity)getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            float displayheight = displayMetrics.ydpi;
             if(e1 == null || e2 == null) return false;
             if(e1.getPointerCount() > 1 || e2.getPointerCount() > 1) return false;
             else {
 
                 try {
-                    if(e1.getY() - e2.getY() > 20 ) {
+                    if(e1.getY() - e2.getY() > 35*displayheight/100 ) {
                         // Hide Actionbar
                         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
+                        MainActivity.getInstance().hideSystemUI();
                         webView.invalidate();
                         return false;
                     }
-                    else if (e2.getY() - e1.getY() > 20 ) {
+                    else if (e2.getY() - e1.getY() > 35*displayheight/100 ) {
                         // Show Actionbar
                         ((AppCompatActivity)getActivity()).getSupportActionBar().show();
+                        MainActivity.getInstance().showSystemUI();
                         webView.invalidate();
                         return false;
                     }
@@ -177,6 +185,7 @@ public class BrowserFragment extends Fragment {
             }
         }
     }
+
 
 
 }
