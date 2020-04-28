@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import com.SuperNamek.NextVoz.CustomWebView;
 import com.SuperNamek.NextVoz.Downloader;
@@ -105,7 +106,7 @@ public class BrowserFragment extends Fragment {
         super.onStop();
     }
 
-    @Subscribe(sticky = true)
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
     public void onRedirectBrowser(EventRedirectBrowser event) {
         webView.loadUrl(event.getUrl());
     }

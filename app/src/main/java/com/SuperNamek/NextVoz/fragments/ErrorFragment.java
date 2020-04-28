@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import com.SuperNamek.NextVoz.R;
 import com.SuperNamek.NextVoz.events.EventDisplayError;
@@ -45,7 +46,7 @@ public class ErrorFragment extends Fragment {
         super.onDetach();
     }
 
-    @Subscribe(sticky = true)
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
     public void onDisplayError(EventDisplayError event) {
         lbl_error.setText(getString(R.string.error) + " " + event.getErrorDescription());
     }

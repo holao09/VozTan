@@ -1,6 +1,5 @@
 package com.SuperNamek.NextVoz;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -104,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @SuppressLint("ShowToast")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
